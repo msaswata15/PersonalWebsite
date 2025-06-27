@@ -40,7 +40,7 @@ const Footer = () => {
 
         <div className="mt-6 pt-6 border-t border-gray-800 text-center">
           <p className="text-gray-500 text-sm">
-            © 2024 Saswata Mondal. All rights reserved.
+            © 2025 Saswata Mondal. All rights reserved.
           </p>
         </div>
       </div>
