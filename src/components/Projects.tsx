@@ -5,6 +5,17 @@ import { ExternalLink, Github, Code, Database, Brain, ShoppingCart, Users, BookO
 const Projects = () => {
   const projects = [
     {
+      title: "Medica - Hospital Management System",
+      description: "A full-stack hospital management and appointment booking platform built with the MERN stack. Provides a seamless experience for patients, doctors, and administrators with appointment scheduling, test booking, medical records, and authentication.",
+      icon: <Users className="text-blue-400" size={24} />,
+      tech: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "MUI", "Chart.js"],
+      features: ["Appointment scheduling", "Test booking", "Medical records", "Multi-role authentication"],
+      type: "Full Stack",
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      liveUrl: "https://medicahospitals.netlify.app/",
+      githubUrl: "https://github.com/yourusername/medica-hospital"
+    },
+    {
       title: "AI-powered Virtual Development Pod",
       description: "An end-to-end, multi-agent software development automation platform that simulates real-world project lifecycle with specialized AI agents for Business Analysis, Design, Development, Testing, Security, and Performance Optimization.",
       icon: <Brain className="text-purple-400" size={24} />,
