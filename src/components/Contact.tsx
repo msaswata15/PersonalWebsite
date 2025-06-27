@@ -221,9 +221,25 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               {[
-                { href: "https://github.com/msaswata15", icon: Github, color: "hover:bg-gray-600", label: "GitHub" },
-                { href: "https://linkedin.com/in/saswatamondal", icon: Linkedin, color: "hover:bg-blue-700", label: "LinkedIn" }
-              ].map(({ href, icon: Icon, color, label }, index) => (
+                { 
+                  href: "https://github.com/msaswata15", 
+                  icon: <Github className="text-white w-5 h-5" />, 
+                  color: "hover:bg-gray-600", 
+                  label: "GitHub" 
+                },
+                { 
+                  href: "https://linkedin.com/in/saswatamondal", 
+                  icon: <Linkedin className="text-white w-5 h-5" />, 
+                  color: "hover:bg-blue-700", 
+                  label: "LinkedIn" 
+                },
+                { 
+                  href: "https://leetcode.com/u/saswatamondal/",
+                  icon: <img src="/image.png" alt="LeetCode" className="w-5 h-5 object-contain" />,
+                  color: "hover:bg-amber-600",
+                  label: "LeetCode"
+                }
+              ].map(({ href, icon, color, label }, index) => (
                 <motion.a
                   key={href}
                   href={href}
@@ -238,7 +254,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   title={label}
                 >
-                  <Icon className="text-white" size={20} />
+                  {icon}
                 </motion.a>
               ))}
             </motion.div>

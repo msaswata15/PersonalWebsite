@@ -198,8 +198,10 @@ const Hero = () => {
             <span className="relative z-10">View My Work</span>
           </motion.button>
           
-          <motion.button 
-            className="group px-8 py-4 border-2 border-gray-500 text-gray-300 rounded-xl font-semibold text-lg hover:border-gray-400 hover:bg-gray-800/50 transition-all duration-300 flex items-center gap-3"
+          <motion.a 
+            href="/resume/Saswata_Mondal_Resume.pdf"
+            download="Saswata_Mondal_Resume.pdf"
+            className="group px-8 py-4 border-2 border-gray-500 text-gray-300 rounded-xl font-semibold text-lg hover:border-gray-400 hover:bg-gray-800/50 transition-all duration-300 flex items-center gap-3 cursor-pointer"
             whileHover={{ scale: 1.05, borderColor: "#9CA3AF" }}
             whileTap={{ scale: 0.95 }}
           >
@@ -210,7 +212,7 @@ const Hero = () => {
               <Download size={20} />
             </motion.div>
             Download Resume
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         <motion.div
