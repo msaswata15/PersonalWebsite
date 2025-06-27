@@ -23,6 +23,7 @@ const Projects = () => {
       features: ["Multi-agent orchestration", "Automated code generation", "Security analysis", "Performance optimization"],
       type: "AI/ML",
       gradient: "from-purple-500/20 to-pink-500/20",
+      liveUrl: "https://aivirtualdevelopmentpod.streamlit.app/",
       githubUrl: "https://github.com/msaswata15/AI_VIRTUAL_DEVELOPMENT_POD"
     },
     {
@@ -167,14 +168,14 @@ const Projects = () => {
             <Sparkles className="text-yellow-400" size={32} />
             <h2 className="text-5xl font-bold text-white">Featured Projects</h2>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           />
-          <motion.p 
+          <motion.p
             className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -201,10 +202,10 @@ const Projects = () => {
               transition={{ duration: 0.3 }}
             >
               {/* Animated Background Gradient */}
-              <motion.div 
+              <motion.div
                 className={`bg-gradient-to-br ${project.gradient} absolute inset-0 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
               />
-              
+
               <div className="relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 backdrop-blur-sm overflow-hidden">
                 {/* Animated Corner Accent */}
                 <motion.div
@@ -214,7 +215,7 @@ const Projects = () => {
                 />
 
                 <div className="flex items-start justify-between mb-4 relative z-10">
-                  <motion.div 
+                  <motion.div
                     className="flex items-center gap-3"
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.3 }}
@@ -229,7 +230,7 @@ const Projects = () => {
                       {project.title}
                     </h3>
                   </motion.div>
-                  <motion.span 
+                  <motion.span
                     className={`px-3 py-1 rounded-full text-xs font-medium border ${getTypeColor(project.type)}`}
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
@@ -238,7 +239,7 @@ const Projects = () => {
                   </motion.span>
                 </div>
 
-                <motion.p 
+                <motion.p
                   className="text-gray-300 mb-4 leading-relaxed"
                   initial={{ opacity: 0.8 }}
                   whileHover={{ opacity: 1 }}
@@ -251,15 +252,15 @@ const Projects = () => {
                   <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                   <div className="grid grid-cols-2 gap-1">
                     {project.features.map((feature, featureIndex) => (
-                      <motion.div 
-                        key={featureIndex} 
+                      <motion.div
+                        key={featureIndex}
                         className="flex items-center gap-2"
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: featureIndex * 0.1 }}
                         viewport={{ once: true }}
                       >
-                        <motion.div 
+                        <motion.div
                           className="w-1.5 h-1.5 bg-blue-400 rounded-full"
                           animate={{ scale: [1, 1.2, 1] }}
                           transition={{ duration: 2, repeat: Infinity, delay: featureIndex * 0.2 }}
