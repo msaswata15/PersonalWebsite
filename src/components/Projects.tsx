@@ -13,7 +13,7 @@ const Projects = () => {
       type: "Full Stack",
       gradient: "from-blue-500/20 to-cyan-500/20",
       liveUrl: "https://medicahospitals.netlify.app/",
-      githubUrl: "https://github.com/yourusername/medica-hospital"
+      githubUrl: "https://github.com/msaswata15/Full-Stack-Hospital-Management"
     },
     {
       title: "AI-powered Virtual Development Pod",
@@ -22,7 +22,8 @@ const Projects = () => {
       tech: ["Python", "Streamlit", "AI Agents", "Multi-Agent Systems"],
       features: ["Multi-agent orchestration", "Automated code generation", "Security analysis", "Performance optimization"],
       type: "AI/ML",
-      gradient: "from-purple-500/20 to-pink-500/20"
+      gradient: "from-purple-500/20 to-pink-500/20",
+      githubUrl: "https://github.com/msaswata15/AI_VIRTUAL_DEVELOPMENT_POD"
     },
     {
       title: "AI Career Companion with Proctored Mock Interview",
@@ -31,6 +32,7 @@ const Projects = () => {
       tech: ["Python", "Streamlit", "AI", "Voice Processing"],
       features: ["Job matching", "Resume generation", "Voice interviews", "Proctoring system"],
       liveUrl: "https://ai-companio.streamlit.app/",
+      githubUrl: "https://github.com/msaswata15/AI-Career-Companion-Proctor-Mock",
       type: "AI/ML",
       gradient: "from-blue-500/20 to-cyan-500/20"
     },
@@ -41,7 +43,9 @@ const Projects = () => {
       tech: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "PayPal", "Razorpay"],
       features: ["Payment integration", "Admin dashboard", "Product reviews", "Order management"],
       type: "Full Stack",
-      gradient: "from-green-500/20 to-emerald-500/20"
+      gradient: "from-green-500/20 to-emerald-500/20",
+      liveUrl: "https://mernecom-gules.vercel.app/",
+      githubUrl: "https://github.com/msaswata15/E-Com-using-Mern"
     },
     {
       title: "Smart Clinic Management System",
@@ -50,7 +54,8 @@ const Projects = () => {
       tech: ["Spring Boot", "Java 17", "MySQL", "MongoDB", "JWT", "Docker", "Thymeleaf"],
       features: ["Multi-role authentication", "REST APIs", "Hybrid database", "Docker support"],
       type: "Backend",
-      gradient: "from-red-500/20 to-orange-500/20"
+      gradient: "from-red-500/20 to-orange-500/20",
+      githubUrl: "https://github.com/msaswata15/Smart-Clinic-Management-System"
     },
     {
       title: "MERN Job Portal",
@@ -59,7 +64,9 @@ const Projects = () => {
       tech: ["MongoDB", "Express.js", "React", "Node.js", "Firebase", "Tailwind CSS"],
       features: ["Firebase auth", "Advanced filtering", "Job posting", "Responsive design"],
       type: "Full Stack",
-      gradient: "from-orange-500/20 to-yellow-500/20"
+      gradient: "from-orange-500/20 to-yellow-500/20",
+      githubUrl: "https://github.com/msaswata15/Internship-Portal",
+      liveUrl: "https://sweproject.vercel.app/"
     },
     {
       title: "Vendor Management App",
@@ -68,7 +75,9 @@ const Projects = () => {
       tech: ["Next.js", "MongoDB", "NextAuth.js", "Tailwind CSS", "Google Auth"],
       features: ["Google login", "Shared database", "CRUD operations", "Glassmorphic UI"],
       type: "Full Stack",
-      gradient: "from-teal-500/20 to-cyan-500/20"
+      gradient: "from-teal-500/20 to-cyan-500/20",
+      liveUrl: "https://vendor-app-pi.vercel.app/",
+      githubUrl: "https://github.com/msaswata15/vendor-app"
     },
     {
       title: "AI Booking Assistant",
@@ -77,7 +86,8 @@ const Projects = () => {
       tech: ["FastAPI", "LangGraph", "Streamlit", "Google Calendar API", "NLP"],
       features: ["Natural language booking", "Calendar integration", "Availability checking", "Slot confirmation"],
       type: "AI/ML",
-      gradient: "from-indigo-500/20 to-purple-500/20"
+      gradient: "from-indigo-500/20 to-purple-500/20",
+      githubUrl: "https://github.com/msaswata15/AI-Booking-Assistant"
     },
     {
       title: "SMS Spam Detection ML",
@@ -86,7 +96,8 @@ const Projects = () => {
       tech: ["Python", "Scikit-learn", "NLTK", "Pandas", "Matplotlib", "Jupyter"],
       features: ["NLP preprocessing", "Logistic regression", "Model evaluation", "Data visualization"],
       type: "AI/ML",
-      gradient: "from-yellow-500/20 to-orange-500/20"
+      gradient: "from-yellow-500/20 to-orange-500/20",
+      githubUrl: "https://github.com/msaswata15/SpamDetectionSMS"
     },
     {
       title: "Library Management System",
@@ -95,7 +106,8 @@ const Projects = () => {
       tech: ["Spring Boot", "Java", "REST API", "Database Management"],
       features: ["Book management", "Member system", "Borrowing tracking", "RESTful APIs"],
       type: "Backend",
-      gradient: "from-pink-500/20 to-rose-500/20"
+      gradient: "from-pink-500/20 to-rose-500/20",
+      githubUrl: "https://github.com/msaswata15/LibraryManagementSystem"
     }
   ];
 
@@ -291,14 +303,19 @@ const Projects = () => {
                       Live Demo
                     </motion.a>
                   )}
-                  <motion.button 
-                    className="flex items-center gap-2 border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-200 text-sm"
-                    whileHover={{ scale: 1.05, borderColor: "#9CA3AF" }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Github size={16} />
-                    Code
-                  </motion.button>
+                  {project.githubUrl && (
+                    <motion.a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors duration-200 text-sm"
+                      whileHover={{ scale: 1.05, borderColor: "#9CA3AF" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github size={16} />
+                      Code
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>
