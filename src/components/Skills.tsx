@@ -57,7 +57,6 @@ const Skills = () => {
     "React Basics - Coursera",
     "Google Cloud Fundamentals - Coursera",
     "Full Stack Web Development - Udemy",
-    "MongoDB for Node.js Developers - MongoDB University"
   ];
 
   const containerVariants = {
