@@ -1,9 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Code, Database, Brain, ShoppingCart, Users, BookOpen, MessageSquare, Calendar, Sparkles } from 'lucide-react';
+import { ExternalLink, Github, Code, Database, Brain, ShoppingCart, Users, BookOpen, MessageSquare, Calendar, Sparkles, Lightbulb } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
+    {
+      title: "LeetCode Hint Genie",
+      description: "A sleek, AI-powered Chrome extension that provides instant hints and solutions for LeetCode problems. Features smart problem detection, AI-powered assistance with hints and solutions, and a beautiful glassmorphism UI design.",
+      icon: <Lightbulb className="text-yellow-400" size={24} />,
+      tech: ["Chrome Extension", "FastAPI", "Google Gemini AI", "JavaScript", "HTML/CSS", "Python"],
+      features: ["Smart problem detection", "AI-powered hints & solutions", "Modern glassmorphism UI", "Dark theme"],
+      type: "Browser Extension",
+      gradient: "from-yellow-500/20 to-amber-500/20",
+      liveUrl: "https://github.com/msaswata15/leet-hint-extension",
+      githubUrl: "https://github.com/msaswata15/leet-hint-extension"
+    },
     {
       title: "Medica - Hospital Management System",
       description: "A full-stack hospital management and appointment booking platform built with the MERN stack. Provides a seamless experience for patients, doctors, and administrators with appointment scheduling, test booking, medical records, and authentication.",
